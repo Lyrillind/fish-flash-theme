@@ -18,8 +18,8 @@ function fish_right_prompt
     test $code -ne 0; and echo (flash_snd); or echo (flash_fst)
   end
 
-  if test $CMD_DURATION -gt 1000
-    printf (flash_dim)" ~"(printf "%.1fs " (math "$CMD_DURATION / 1000"))(flash_off)
+  if test $CMD_DURATION -gt 500
+    printf (flash_trd)" ~"(printf "%.1fs " (math "$CMD_DURATION / 1000"))(flash_off)
   end
 
   if test -d .git
